@@ -1,0 +1,206 @@
+.root {
+    -fx-background-color: white;
+    -fx-font-size: 24px;
+}
+#header {
+    -fx-fill: linear-gradient(from 0% 0% to 100% 0%, #00c6fb, #005bea);
+}
+.text-field, .password-field {
+    -fx-border-color: #3382FE;
+    -fx-border-width: 2px;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+}
+#searchBox {
+    -fx-border-color: #3382FE;
+    -fx-border-width: 2px;
+    -fx-border-radius: 50px;
+    -fx-background-radius: 50px;
+}
+#loginBtn,
+#submitBtn,
+#chooseYear,
+#settlementBtn,
+#tryCacuBtn,
+#changePassBtn,
+#chooseMonth,
+.department,
+#addNewDepartment,
+#addNewStaff,
+#cacuTax,
+#approveBtn,
+#addNewDepartment
+{
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 0%, #00c6fb, #005bea); /* Màu nền gradient */
+    -fx-border-radius: 50px; /* Bo góc 50px */
+    -fx-background-radius: 50px; /* Bo góc cho nền */
+    -fx-text-fill: white; /* Màu chữ trắng (tuỳ chỉnh) */
+    /*-fx-padding: 10px 20px; !* Padding cho nút *!*/
+    -fx-font-size: 22px; /* Cỡ chữ (tuỳ chỉnh) */
+    -fx-font-weight: bold; /* Đậm chữ (tuỳ chỉnh) */
+    -fx-cursor: hand;
+}
+
+#addNewDepartment{
+    -fx-border-radius: 10px; /* Bo góc 50px */
+    -fx-background-radius: 10px;
+}
+.primary-btn {
+    -fx-border-radius: 50px; /* Bo góc 50px */
+    -fx-background-radius: 50px;
+    -fx-cursor: hand;
+    -fx-background-color: white;
+}
+#updateBtn {
+    -fx-border-radius: 50px; /* Bo góc 50px */
+    -fx-background-radius: 50px;
+    -fx-cursor: hand;
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #a1c4fd 0%, #c2e9fb 100%);
+}
+.selectedBtn {
+    -fx-border-radius: 50px; /* Bo góc 50px */
+    -fx-background-radius: 50px;
+    -fx-cursor: hand;
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #a1c4fd, #c2e9fb);
+    -fx-text-fill: white;
+}
+
+.spinner .increment-arrow-button,
+.spinner .decrement-arrow-button {
+    -fx-background-color: transparent;
+    -fx-padding: 5px;
+    -fx-min-width: 24px;
+    -fx-min-height: 24px;
+}
+
+.spinner .increment-arrow-button .arrow,
+.spinner .decrement-arrow-button .arrow {
+    -fx-background-color: #007bff; /* Màu xanh lam cho mũi tên */
+    -fx-shape: "M 0 4 L 4 0 L 8 4 Z"; /* Hình dạng của mũi tên */
+    -fx-scale-x: .5;
+    -fx-scale-y: .5;
+}
+
+.spinner .decrement-arrow-button .arrow {
+    -fx-rotate: 180; /* Xoay mũi tên để chỉ xuống */
+}
+.spinner {
+    -fx-border-color: #007bff; /* Viền xanh lam */
+    -fx-border-width: 2px;
+    -fx-border-radius: 10px; /* Bo góc viền */
+    -fx-background-radius: 10px; /* Bo góc nền */
+    -fx-background-color: white; /* Đảm bảo nền luôn trắng */
+}
+
+.spinner .text-field {
+    -fx-background-color: transparent;
+    -fx-text-fill: black;
+    -fx-font-size: 22px;
+    -fx-padding: 0 10px;
+    -fx-border-color: transparent;
+}
+
+.spinner .increment-button, .spinner .decrement-button {
+    -fx-background-color: white; /* Giữ màu nền trắng cho nút tăng và giảm */
+    -fx-border-color: #007bff; /* Viền xanh lam */
+    -fx-border-width: 2px;
+    -fx-background-radius: 10px; /* Bo góc nút */
+}
+
+.spinner .increment-button:hover, .spinner .decrement-button:hover {
+    -fx-background-color: white; /* Giữ nền trắng khi hover */
+}
+
+.spinner .increment-button:pressed, .spinner .decrement-button:pressed {
+    -fx-background-color: white; /* Giữ nền trắng khi nhấn */
+}
+
+
+
+.table-view {
+    -fx-background-color: transparent;
+    -fx-border-radius: 50; /* Làm bo góc border */
+    -fx-background-radius: 50; /* Làm bo góc nền */
+    -fx-border-color: #3382FE; /* Màu viền */
+    -fx-border-width: 2; /* Độ dày của viền */
+    -fx-padding: -2;
+
+}
+
+
+.table-view .column-header-background {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header {
+    -fx-background-color: linear-gradient(from 0% 0% to 0% 100%, #48c6ef, #6f86d6); /* Màu nền gradient */
+}
+.table-view .column-header .label {
+    -fx-text-fill: white; /* Màu chữ */
+    -fx-font-size: 22px; /* Kích thước chữ */
+    -fx-alignment: center; /* Căn giữa nội dung */
+    -fx-padding: 10; /* Tăng khoảng cách nội dung */
+}
+.table-view .arrow {
+    -fx-background-color: white;
+}
+
+.first-column {
+    -fx-background-radius: 50 0 0 0;
+    -fx-border-radius: 50 0 0 0;
+}
+
+
+.last-column {
+    -fx-background-radius: 0 50 0 0;
+    -fx-border-radius: 0 50 0 0;
+
+}
+
+
+.combo-box .arrow {
+    -fx-background-color: white;
+}
+.combo-box .list-cell:hover {
+    -fx-background-color: lightgray; /* Màu nền khi hover */
+}
+.combo-box .list-cell {
+    -fx-alignment: center;
+    -fx-background-color: transparent; /* Nền trong suốt */
+}
+
+#changePass:hover,
+#editInfo:hover{
+    -fx-cursor: HAND;
+}
+
+.scroll-pane {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+
+    -fx-border-width: 0;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.check-box {
+    -fx-background-color: transparent; /* Nền trong suốt */
+    -fx-border-color: #0965F4;         /* Viền màu xanh */
+    -fx-border-width: 2;              /* Độ rộng viền */
+    -fx-border-radius: 4;             /* Bo góc viền */
+    -fx-padding: 5;                   /* Khoảng cách nội dung */
+    -fx-cursor: hand;                 /* Hiệu ứng con trỏ */
+}
+
+/* Xóa nền mặc định của ô vuông bên cạnh */
+.check-box > .box {
+    -fx-background-color: transparent; /* Nền trong suốt */
+    /*-fx-border-color: #0965F4;         !* Viền màu xanh *!*/
+    -fx-border-width: 2;              /* Độ rộng viền */
+    -fx-border-radius: 2;             /* Bo góc */
+}
+
+
+
+
+

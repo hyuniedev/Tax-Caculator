@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1024.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.taxcaculator.controller.navBarController">
+    <children>
+        <Rectangle fx:id="header" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="1024.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" width="345.0" />
+        <GridPane layoutX="24.0" layoutY="227.0" prefHeight="392.0" prefWidth="298.0" vgap="93.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="64.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="64.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="64.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Button fx:id="listStaff" mnemonicParsing="false" onAction="#HandleButtonOnClick" prefHeight="64.0" prefWidth="298.0" text="Danh sách nhân viên" textFill="#0965f4">
+                    <font>
+                        <Font name="Arial Bold" size="24.0" />
+                    </font>
+               <styleClass>
+                  <String fx:value="primary-btn" />
+                  <String fx:value="accountant" />
+               </styleClass>
+                </Button>
+                <Button fx:id="addStaff" mnemonicParsing="false" onAction="#HandleButtonOnClick" prefHeight="64.0" prefWidth="298.0" text="Thêm nhân viên" textFill="#0965f4" GridPane.rowIndex="1">
+                    <font>
+                        <Font name="Arial Bold" size="24.0" />
+                    </font>
+               <styleClass>
+                  <String fx:value="primary-btn" />
+                  <String fx:value="accountant" />
+               </styleClass>
+                </Button>
+                <Button fx:id="annualTax" mnemonicParsing="false" onAction="#HandleButtonOnClick" prefHeight="64.0" prefWidth="298.0" text="Quyết toán năm" textFill="#0965f4" GridPane.rowIndex="2">
+                    <font>
+                        <Font name="Arial Bold" size="24.0" />
+                    </font>
+               <styleClass>
+                  <String fx:value="primary-btn" />
+                  <String fx:value="accountant" />
+               </styleClass>
+                </Button>
+            </children>
+        </GridPane>
+        <AnchorPane fx:id="generalScene" layoutX="345.0" layoutY="71.0" prefHeight="952.0" prefWidth="1582.0" />
+        <ImageView fx:id="logout" fitHeight="48.0" fitWidth="48.0" layoutX="149.0" layoutY="941.0" onMouseClicked="#HandleLogout" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../img/logout.png" />
+            </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+        </ImageView>
+      <ImageView fx:id="message" fitHeight="64.0" fitWidth="64.0" layoutX="141.0" layoutY="57.0" onMouseClicked="#MoveOnNotification" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/message.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Text fx:id="nameDepartment" fill="#0965f4" layoutX="391.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NameDep">
+         <font>
+            <Font name="Arial Bold" size="46.0" />
+         </font>
+      </Text>
+      <ImageView fx:id="backBtn" fitHeight="46.0" fitWidth="46.0" layoutX="14.0" layoutY="14.0" onMouseClicked="#gotoListDepartment" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/back.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="deletebtn" fitHeight="40" fitWidth="35" layoutX="141.0" layoutY="707.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/trashCan.png" />
+         </image>
+      </ImageView>
+    </children>
+</Pane>

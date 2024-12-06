@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="952.0" prefWidth="1582.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.taxcaculator.controller.MessageController">
+   <children>
+      <AnchorPane layoutX="7.0" layoutY="53.0" prefHeight="885.0" prefWidth="1536.0" >
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="672.0" layoutX="72.0" layoutY="74.0" stroke="#3382fe" strokeType="INSIDE" strokeWidth="2.0" width="1406.0" />
+            <ScrollPane hbarPolicy="NEVER" layoutX="80.0" layoutY="87.0" prefHeight="650.0" prefWidth="1391.0" style="-fx-background: white; -fx-border-color: transparent;">
+              <content>
+                <AnchorPane fx:id="lsMessage" minHeight="0.0" minWidth="0.0" prefHeight="650.0" prefWidth="1391.0" style="-fx-border-color: transparent" >
+                     <children>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </ScrollPane>
+            <Button fx:id="approveBtn" layoutX="714.0" layoutY="774.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="192.0" text="XÁC NHẬN" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="22.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<ScrollPane fitToWidth="true" hbarPolicy="NEVER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1024.0" prefWidth="1582.0" style="-fx-background: white;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.taxcaculator.controller.annualSettlementController">
+    <content>
+        <AnchorPane prefHeight="1024.0" prefWidth="1582.0">
+            <children>
+                <TableView fx:id="listStaffAnnual" layoutX="14.0" layoutY="299.0" prefHeight="683.0" prefWidth="1526.0">
+                    <columns>
+                        <TableColumn fx:id="sttColumn" prefWidth="68.0" resizable="false" styleClass="first-column" text="STT" />
+                        <TableColumn fx:id="nameStaffColumn" minWidth="0.0" prefWidth="243.0" resizable="false" text="Tên nhân viên" />
+                        <TableColumn fx:id="totalSalaryColumn" prefWidth="243.0" resizable="false" text="Tổng lương/ 12 tháng" />
+                        <TableColumn fx:id="totalFeeColumn" prefWidth="243.0" resizable="false" text="Tổng giảm trừ/ 12 tháng" />
+                        <TableColumn fx:id="totalTaxColumn" prefWidth="243.0" resizable="false" text="Thuế TNCN/ Tháng" />
+                  <TableColumn fx:id="taxYearColumn" prefWidth="243.0" resizable="false" text="Thuế TNCN năm" />
+                  <TableColumn fx:id="rsColumn" prefWidth="243.0" resizable="false" styleClass="last-column" text="Truy lĩnh/ Truy thu" />
+                    </columns>
+                </TableView>
+                <ComboBox fx:id="chooseYear" layoutX="27.0" layoutY="137.0" prefHeight="64.0" prefWidth="253.0" promptText="Chọn năm">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                </ComboBox>
+                <Text fill="#0965f4" layoutX="1200.0" layoutY="267.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*Truy thu “+”,    Truy lĩnh “-”" wrappingWidth="286.13671875">
+                    <font>
+                        <Font name="Arial Italic" size="20.0" />
+                    </font>
+                </Text>
+            </children>
+            <cursor>
+                <Cursor fx:constant="DEFAULT" />
+            </cursor>
+        </AnchorPane>
+    </content>
+</ScrollPane>

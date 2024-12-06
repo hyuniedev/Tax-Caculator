@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="1024.0" prefWidth="1582.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.taxcaculator.controller.tryCacuTaxController">
+   <children>
+      <Text fill="#0965f4" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tính thuế TNCN" textAlignment="CENTER" wrappingWidth="1589.0">
+         <font>
+            <Font name="Arial Bold" size="46.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="50.0" arcWidth="50.0" fill="WHITE" height="512.0" layoutX="395.0" layoutY="256.0" stroke="#3382fe" strokeType="INSIDE" strokeWidth="2.0" styleClass="frameGeneral" width="800.0" />
+      <GridPane layoutX="546.0" layoutY="300.0" prefHeight="112.0" prefWidth="450.0" vgap="18.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="46.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Text fill="#0965f4" strokeType="OUTSIDE" strokeWidth="0.0" text="Nhập lương tháng của bạn" wrappingWidth="452.271484375">
+               <font>
+                  <Font name="Arial Bold" size="24.0" />
+               </font>
+            </Text>
+            <TextField fx:id="salaryField" onKeyReleased="#formatSalaryField" prefHeight="64.0" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Arial" size="24.0" />
+               </font>
+            </TextField>
+         </children>
+      </GridPane>
+      <GridPane layoutX="546.0" layoutY="457.0" prefHeight="112.0" prefWidth="450.0" vgap="18.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="46.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Text fill="#0965f4" strokeType="OUTSIDE" strokeWidth="0.0" text="Nhập số người phụ thuộc" wrappingWidth="452.271484375">
+               <font>
+                  <Font name="Arial Bold" size="24.0" />
+               </font>
+            </Text>
+            <TextField fx:id="dependentField" prefHeight="64.0" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Arial" size="24.0" />
+               </font>
+            </TextField>
+         </children>
+      </GridPane>
+      <Text fx:id="totalGiamtru" fill="#0965f4" layoutX="546.0" layoutY="614.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Giảm trừ/ tháng: 0đ" wrappingWidth="450.0">
+         <font>
+            <Font name="Arial" size="24.0" />
+         </font>
+      </Text>
+      <Text fx:id="giamTruCaNhan" fill="#0965f4" layoutX="132.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*Giảm trừ thu nhập cá nhân/ tháng : 11.000.000đ" wrappingWidth="551.0">
+         <font>
+            <Font name="Arial" size="24.0" />
+         </font>
+      </Text>
+      <Text fx:id="giamTruNPT" fill="#0965f4" layoutX="132.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*Giảm trừ người phụ thuộc : 4.400.000đ" wrappingWidth="551.0">
+         <font>
+            <Font name="Arial" size="24.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="50.0" arcWidth="50.0" fill="WHITE" height="170.0" layoutX="395.0" layoutY="800.0" stroke="#3382fe" strokeType="INSIDE" strokeWidth="2.0" styleClass="frameGeneral" width="800.0" />
+      <Text fill="#0965f4" layoutX="395.0" layoutY="853.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thuế TNCN" textAlignment="CENTER" wrappingWidth="800.0">
+         <font>
+            <Font name="Arial Bold" size="24.0" />
+         </font>
+      </Text>
+      <Text fx:id="taxTry" fill="#0965f4" layoutX="395.0" layoutY="907.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0đ" textAlignment="CENTER" wrappingWidth="800.0">
+         <font>
+            <Font name="Arial Bold" size="24.0" />
+         </font>
+      </Text>
+      <Button fx:id="tryCacuBtn" layoutX="699.0" layoutY="672.0" mnemonicParsing="false" onAction="#OnclickTryCacuBtn" prefHeight="64.0" prefWidth="192.0" text="TÍNH" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="22.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

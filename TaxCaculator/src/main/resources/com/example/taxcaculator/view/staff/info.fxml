@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="1024.0" prefWidth="1582.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.taxcaculator.controller.infoController">
+   <children>
+      <Rectangle arcHeight="50.0" arcWidth="50.0" fill="WHITE" height="604.0" layoutX="343.0" layoutY="267.0" stroke="#3382fe" strokeType="INSIDE" styleClass="frameGeneral" width="896.0" />
+      <Text fill="#0965f4" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thông tin cá nhân" textAlignment="CENTER" wrappingWidth="1582.0">
+         <font>
+            <Font name="Arial Bold" size="46.0" />
+         </font>
+      </Text>
+      <GridPane layoutX="403.0" layoutY="349.0" prefHeight="469.0" prefWidth="740.0" vgap="63.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="274.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="448.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="64.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="64.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="64.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="64.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Text fill="#0965f4" strokeType="OUTSIDE" strokeWidth="0.0" text="Số điện thoại">
+               <font>
+                  <Font name="Arial" size="24.0" />
+               </font>
+            </Text>
+            <Text fill="#0965f4" strokeType="OUTSIDE" strokeWidth="0.0" text="Địa chỉ" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Arial" size="24.0" />
+               </font>
+            </Text>
+            <Text fill="#0965f4" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Arial" size="24.0" />
+               </font>
+            </Text>
+            <Text fill="#0965f4" strokeType="OUTSIDE" strokeWidth="0.0" text="Số người phụ thuộc" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Arial" size="24.0" />
+               </font>
+            </Text>
+            <TextField fx:id="phone" disable="true" prefHeight="64.0" prefWidth="448.0" GridPane.columnIndex="1" />
+            <TextField fx:id="address" disable="true" layoutX="293.0" layoutY="13.0" prefHeight="64.0" prefWidth="448.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="email" disable="true" layoutX="293.0" layoutY="146.0" prefHeight="64.0" prefWidth="448.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Spinner fx:id="dependent" disable="true" prefHeight="64.0" prefWidth="460.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+      <Text fx:id="fullName" fill="#0965f4" layoutX="343.0" layoutY="228.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nguyễn A" wrappingWidth="268.3984375">
+         <font>
+            <Font name="Arial" size="24.0" />
+         </font>
+      </Text>
+      <Text fx:id="birthDay" fill="#0965f4" layoutX="611.0" layoutY="228.0" strokeType="OUTSIDE" strokeWidth="0.0" text="01/01/2000" wrappingWidth="268.3984375">
+         <font>
+            <Font name="Arial" size="24.0" />
+         </font>
+      </Text>
+      <Button fx:id="submitBtn" disable="true" layoutX="695.0" layoutY="922.0" mnemonicParsing="false" onAction="#HandleSubmit" prefHeight="64.0" prefWidth="192.0" text="XÁC NHẬN" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="22.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="editInfo" fitHeight="46.0" fitWidth="46.0" layoutX="1177.0" layoutY="281.0" onMouseClicked="#EditOnClick" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/edit.png" />
+         </image>
+      </ImageView>
+      <Text fx:id="changeDependentTxt" layoutX="912.0" layoutY="848.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="RIGHT" wrappingWidth="228.13671875">
+         <font>
+            <Font name="Arial Italic" size="18.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
