@@ -248,12 +248,14 @@ public class annualTaxController {
 
     public String getRsTax(int salary, int dependents, int year, int taxMonth){
         String rs="";
+
         if(totalMonth == 12){
             TaxCalculator taxCalculator = new TaxCalculator();
             double taxAnnual = taxCalculator.taxAnnual(salary,dependents,year);
             int result = 0;
             if(taxAnnual == taxMonth){
                 rs="0 đ";
+
             }
             else if(taxAnnual > taxMonth) {
                 result = (int)taxAnnual - taxMonth;
